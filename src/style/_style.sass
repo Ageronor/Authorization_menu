@@ -1,0 +1,118 @@
+@import src\style\_fonts.sass
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap')
+
+*
+    margin: 0
+    box-sizing: border-box
+
+body
+    height: 100vh
+    display: grid
+    align-items: center
+    justify-content: center
+    font-family: 'generalFont'
+
+.form
+    width: 300px
+    display: grid
+    grid-gap: 16px
+    padding: 30px
+    background-color: #fff
+    background-repeat: 16px
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2)
+    text-align: center
+
+.input
+    position: relative
+    display: block
+    margin-bottom: 16px
+
+input
+    height: 40px
+    width: 100%
+    outline: none
+    padding: 0px 16px
+    border-radius: 4px
+    border: 1px solid #ccc
+    color: #57b9ff
+
+input:focus,
+.input.filled input
+    border-color: #57b9ff
+
+.input.error input
+    border-color: red
+
+input:focus + p,
+.input.filled p
+    cursor: default
+    top: -6px
+    left: 8px
+    font-size: 12px
+    color: #57b9ff
+
+.input.error p
+    color: red
+
+.h2
+    font-size: 24px
+    margin-bottom: 16px
+
+p
+    cursor: text
+    transition: all .3s ease-in-out
+    position: absolute
+    font-family: 'Roboto', sans-serif
+    top: 27%
+    left: 16px
+    font-weight: 300
+    background-color: #fff
+    padding: 0px 4px
+
+.btn
+    justify-self: center
+    background-color: #57b9ff
+    color: #fff
+    padding: 10px 24px
+    cursor: pointer
+    border-radius: 8px
+
+.btn.disable
+    cursor: default
+    pointer-events: none
+    background-color: #777
+
+.leng-error
+    font-size: 12px
+    color: red
+    display: none
+
+.leng-error.view
+    display: block
+
+.checkbox1
+    border: 1px solid #777
+    height: 25px
+    width: 25px
+    display: inline-block
+    cursor: pointer
+    position: relative
+
+.check
+    visibility: hidden
+    background: #57b9ff
+    display: block
+    height: 100%
+
+.active
+    visibility: visible
+
+.check-text
+    margin-left: 30px
+    position: absolute
+    font-size: 20px
+    color: #777
+    top: 0
+
+.check-text.active
+    color: #57b9ff
