@@ -8,6 +8,8 @@ const form = {
   Inputs: document.querySelectorAll("input"),
   LogErr: document.getElementById("log-error"),
   PassErr: document.getElementById("pass-error"),
+  LogInputErr: document.getElementById("LogInput"),
+  PassInputErr: document.getElementById("PassInput"),
 };
 
 var cbElements = document.getElementById("checkbox1");
@@ -39,26 +41,30 @@ let entryPass = true;
 function validateLogin() {
   const  value  = form.Login.getElementsByTagName("input")[0];
   if (value.value.length >= 3) {
-    form.LogErr.classList.remove("view");
-    form.Login.classList.remove("error");
+    form.LogErr.style.display = ''
+    form.LogInputErr.style.borderColor = '#57b9ff'
+    form.Login.style.color = '#57b9ff'
     entryLog = true
   } else {
     form.Button.classList.add("disable");
     form.Login.classList.remove("filled");
-    form.Login.classList.add("error");
-    form.LogErr.classList.add("view");
+    form.LogInputErr.style.borderColor = 'red'
+    form.Login.style.color = 'red'
+    form.LogErr.style.display = 'block'
     entryLog = false
   }
   const  value2 = form.Pass.getElementsByTagName("input")[0];
   if (value2.value.length >= 3) {
-    form.PassErr.classList.remove("view");
-    form.Pass.classList.remove("error");
+    form.PassErr.style.display = ''
+    form.PassInputErr.style.borderColor = '#57b9ff'
+    form.Pass.style.color = '#57b9ff'
     entryPass = true
   } else {
     form.Button.classList.add("disable");
     form.Pass.classList.remove("filled");
-    form.Pass.classList.add("error");
-    form.PassErr.classList.add("view");
+    form.PassInputErr.style.borderColor = 'red'
+    form.Pass.style.color = 'red'
+    form.PassErr.style.display = 'block'
     entryPass = false
   }
   if (entryLog && entryPass) {
