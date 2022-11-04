@@ -37,11 +37,8 @@ input
     color: #57b9ff
 
 input:focus,
-.input.filled input
+.filled input
     border-color: #57b9ff
-
-.input.error input
-    border-color: red
 
 input:focus + p,
 .input.filled p
@@ -50,9 +47,6 @@ input:focus + p,
     left: 8px
     font-size: 12px
     color: #57b9ff
-
-.input.error p
-    color: red
 
 .h2
     font-size: 24px
@@ -76,19 +70,16 @@ p
     padding: 10px 24px
     cursor: pointer
     border-radius: 8px
-
-.btn.disable
-    cursor: default
-    pointer-events: none
-    background-color: #777
+    &.disable
+        cursor: default
+        pointer-events: none
+        background-color: #777
 
 .leng-error
     font-size: 12px
     color: red
     display: none
 
-.leng-error.view
-    display: block
 
 .checkbox1
     border: 1px solid #777
